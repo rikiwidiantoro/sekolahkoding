@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metode Javascript</title>
+</head>
+<body>
+    <h1>metode javascript</h1>
+
+    <p>Nama : <span id="nama"></span></p>
+    <p>Umur : <span id="umur"></span></p>
+    <p>Pekerjaan : <span id="pekerjaan"></span></p>
+
+    <div id="box"></div>
+
+
+    <script>
+        // membuat object
+        // key => value
+        let programmer = {
+            nama    : "Riki Widiantoro",
+            umur    : 22,
+            pekerjaan : "mahasiswa",
+
+            // membuat fungsi pada object dengan this sebagai parameter kuncinya
+            getData : function() {
+                return "Nama saya " + this.nama + " dan saya berumur " + this.umur + " tahun."
+            },
+            // mengubah value dari key dengan fungsi
+            setData : function(name) {
+                this.nama = name;
+            }
+        };
+
+        // // cara buat object kedua
+        // let designer = new Object();
+        // designer.nama = "Toro";
+        // designer.umur = 12;
+
+
+        // // cara memanggil object ada 2 macam
+        // document.getElementById('nama').innerHTML = programmer["nama"];
+        // document.getElementById('umur').innerHTML = programmer["umur"];
+        // document.getElementById('pekerjaan').innerHTML = programmer.pekerjaan;
+
+
+        programmer.setData('Toro');
+        document.getElementById('box').innerHTML = programmer.getData();
+        
+    </script>
+</body>
+</html>
