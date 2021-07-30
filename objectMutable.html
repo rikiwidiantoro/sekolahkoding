@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Prototype Javascript</title>
+</head>
+<body>
+    <h1>Object Prototype Javascript</h1>
+
+    <p>Nama : <span id="nama"></span></p>
+    <p>Umur : <span id="umur"></span></p>
+    <p>Pekerjaan : <span id="pekerjaan"></span></p>
+
+    <div id="box"></div>
+
+
+    <script>
+        // membuat object
+        // key => value
+        let programmer = {
+            nama    : "Riki Widiantoro",
+            umur    : 22,
+            pekerjaan : "mahasiswa",
+
+            // membuat fungsi pada object dengan this sebagai parameter kuncinya
+            getData : function() {
+                return "Nama saya " + this.nama + " dan saya berumur " + this.umur + " tahun."
+            },
+            // mengubah value dari key dengan fungsi
+            setData : function(name) {
+                this.nama = name;
+            }
+        };
+
+
+        // object mutable
+
+        let designer = programmer;
+        designer.nama = "Toros"; // >> sifat mutable pada object >> jika mendeklarasikan object baru maka object dengan key yang sama sebelumnya akan tertimpa object baru
+
+
+        document.getElementById('box').innerHTML = programmer.nama;
+
+
+
+
+        // // cara buat object kedua
+        // let designer = new Object();
+        // designer.nama = "Toro";
+        // designer.umur = 12;
+
+
+        // // cara memanggil object ada 2 macam
+        // document.getElementById('nama').innerHTML = programmer["nama"];
+        // document.getElementById('umur').innerHTML = programmer["umur"];
+        // document.getElementById('pekerjaan').innerHTML = programmer.pekerjaan;
+
+
+        // programmer.setData('Toro');
+        // document.getElementById('box').innerHTML = programmer.getData();
+
+
+
+
+        // // prototype object
+
+        // function pemain_bola( name, umurr ) {
+        //     this.nama = name;
+        //     this.umur = umurr;
+        // }
+
+
+        // // menambah property diluar fungsi nya sendiri
+        // pemain_bola.prototype.negara = "Argentina";
+
+
+        // // mendeklarasikan 
+        // let player1 = new pemain_bola('Cristiano Ronaldo', 27);
+        // let player2 = new pemain_bola('Leonel Massi', 25);
+
+        // document.getElementById('box').innerHTML = player2.negara;
+        
+    </script>
+</body>
+</html>
