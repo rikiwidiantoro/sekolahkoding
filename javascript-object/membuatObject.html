@@ -7,11 +7,32 @@
     <title>Membuat Objek Javacript</title>
 </head>
 <body>
-    
+    <h1>membuat object javascript</h1>
+
+    <p>Nama : <span id="nama"></span></p>
+    <p>Umur : <span id="umur"></span></p>
+    <p>Pekerjaan : <span id="pekerjaan"></span></p>
 
 
     <script>
-        
+        // membuat object
+        // key => value
+        let programmer = {
+            nama    : "Riki Widiantoro",
+            umur    : 22,
+            pekerjaan : "mahasiswa"
+        };
+
+        // cara buat object kedua
+        let designer = new Object();
+        designer.nama = "Toro";
+        designer.umur = 12;
+
+
+        // cara memanggil object ada 2 macam
+        document.getElementById('nama').innerHTML = designer["nama"];
+        document.getElementById('umur').innerHTML = designer["umur"];
+        document.getElementById('pekerjaan').innerHTML = programmer.pekerjaan;
     </script>
 </body>
 </html>
