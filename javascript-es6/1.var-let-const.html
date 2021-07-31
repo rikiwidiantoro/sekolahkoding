@@ -21,16 +21,30 @@
         // console.log(nama);
 
         
-        function getNama() {
-            if( true ) {
-                let nama = 'riki';
-                console.log(nama);
-            } else {
-                console.log(nama);
-            }
-        }
+        // function getNama() { >> jika var akan undifined, jika let maka akan error
+        //     if( true ) {
+        //         let nama = 'riki';
+        //         console.log(nama);
+        //     } else {
+        //         console.log(nama);
+        //     }
+        // }
 
-        getNama();
+        // getNama();
+
+
+
+        // const tidak bisa reassign/buat variabel sama,, tapi bisa replace/mengganti variabel lama ke variabel baru
+        const person = {
+            id : 1,
+            nama : 'riki'
+        };
+        
+        // mengubah isi variabel lama ke baru / replace || dan menambahkan isi
+        person.id = 2;
+        person.umur = 22;
+
+        console.log(person);
 
 
     </script>
