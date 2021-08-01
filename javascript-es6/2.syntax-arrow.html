@@ -4,13 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sintax arrow</title>
+    <title>syntax arrow</title>
 </head>
 <body>
     <h1>syntax arrow</h1>
 
     <script>
-        
+        // syntax arrow | => | function shorthand | penulisan singkat untuk menulis fungsi
+
+        // forEach() >> hanya mengulang isi array
+        // map() >> mengembalikan array
+
+        let member = ['riki', 'widi', 'toro'];
+
+        // versi biasa dengan forEach()
+        // member.forEach(function(name) {
+        //     console.log(name);
+        // });
+
+        // versi arrow dengan satu parameter dan satu perintah
+        member.forEach(name => console.log(name));
+
+        // versi arrow dengan lebih dari satu parameter
+        member.forEach((name, index) => console.log(name + ' ' + index) );
+
+
+        // dengan map()
+        // let memberIndex = member.map((name, index) => {
+        //     return name + ' ' + index;
+        // });
+
+        // dengan syntax arrow, return tidak perlu di tulis,,, tapi tanpa kurung kurawal{} dan titik koma;
+        let memberIndex = member.map((name, index) => name + ' ' + index)
+
+        console.log(memberIndex);
+
+
+        // dengan syntax arrow maka konsep this nya akan beda
+
+        // jika tidak mendeklarasikan this terlebih dahulu maka this yang diambil adalah this window >> tidak menggunakan syntax arrow
+        // let namaRiki = {
+        //     nama : ['riki', 'widi', 'anto', 'toro'],
+        //     getNama() {
+        //         this.nama.map(function(sapa) {
+        //             console.log(this);
+        //         });
+        //     }
+        // }
+
+        // jika menggunakan syntax arrow maka this nya mengacu pada this object nya
+        let namaRiki = {
+            nama : ['riki', 'widi', 'anto', 'toro'],
+            getNama() {
+                this.nama.map((sapa) => {
+                    console.log(this);
+                });
+            }
+        };
+
+        console.log(namaRiki.getNama());
+
+
+
     </script>
 </body>
 </html>
