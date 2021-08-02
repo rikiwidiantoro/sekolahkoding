@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal</title>
+</head>
+<body>
+    <h1>Template Literal</h1>
+
+
+    <script>
+        let username = 'Riki Widiantoro';
+        let umur = 22;
+        
+        // code biasa
+        console.log('Member ' + username + ' berumur ' + umur + ' tahun.');
+
+        // code dengan template literal `` (backtick)
+        let teks = `Member ${username} berumur ${umur} tahun.`;
+        console.log(teks);
+
+
+        // jika bermain dom bisa lebih fleksibel
+        let data = `
+            <p>${username}</p>
+            <span>${umur}</span>
+        `;
+        console.log(data);
+
+
+        // template literal dengan fungsi
+        data = (string, username, umur) => {
+
+            string1 = string[0]
+            string2 = string[1]
+            string3 = string[2]
+
+            console.log(string1)
+        }
+
+        let output = data`nama saya adalah ${username}
+                    berumur ${umur} tahun.`
+
+        
+
+
+    </script>
+</body>
+</html>
