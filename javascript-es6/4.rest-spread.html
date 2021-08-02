@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest dan spread</title>
+</head>
+<body>
+    <h1>rest dan spread</h1>
+
+
+    <script>
+
+        signIn = (username, password, umur) => {
+            console.log( username + ' punya password ' + password + ' dan berumur ' + umur + ' tahun.');
+        }
+
+        let dataUser = ['Riki Widiantoro', '1234', '22'];
+
+        // signIn(dataUser[0], dataUser[1]);
+
+        // dengan rest spread operator
+        signIn(...dataUser);
+
+
+        // jika dibalik, 
+        masuk = (...data) => {
+            console.log(data);
+        }
+
+        let nama = 'riki';
+        let pass = '123456';
+        let age = '22';
+
+        masuk(nama, pass, age);
+
+
+
+        // rest dan spread operator cocok untuk mengambil SEMUA data pada array atau objek, sehingga tidak perlu menggunakan forEach() atau map()
+
+
+    </script>
+</body>
+</html>
