@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand dan Destructuring Object</title>
+</head>
+<body>
+    <h1>Shorthand dan Destructuring Object</h1>
+
+
+    <script>
+        let nama = 'Riki Widiantoro'
+        let umur = 22;
+        let getData = () => {
+            return `Member ${nama} berumur ${umur} tahun.`
+        }
+
+        // shorthand >> penyingkatan baris code
+        let member = {
+            nama, umur, getData
+        }
+
+        console.log(member);
+        console.log(member.getData());
+
+
+
+        // destructuring >> memecah object atau array
+        let anggota = {
+            name : 'toros',
+            age : 23
+        }
+
+        let {age, name : nn} = anggota // reasign / rename dengan key nama lama : value nama baru
+
+        console. log(nn);
+
+        // walaupun dibolak-balik gakpapa karena bukan berdasarkan urutannya seperti spread operator tetapi berdasarkan key/kuncinya
+
+
+        // pada array >> jika tidak pakai key dan value maka harus urut
+        let angka = [1, 2, 3]
+
+        let [a, b, c] = angka
+
+        console.log(b+c)
+
+    </script>
+</body>
+</html>
