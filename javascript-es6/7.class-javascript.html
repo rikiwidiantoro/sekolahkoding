@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Javascript</title>
+</head>
+<body>
+    <h1>Class Javascript</h1>
+    
+
+
+    <script>
+        
+        class Members {
+            // // dengan constructor()
+            // constructor(nama, umur) {
+            //     this.nama = nama
+            //     this.umur = umur
+            // }
+
+            // // tanpa constructor dengan menggunakan fungsi
+            getNama = (nama) => {
+                return `nama saya adalah ${nama}`
+            }
+        }
+
+        // let member = new Members('Riki', 22)
+        // console.log(member)
+
+        let member = new Members()
+        console.log(member.getNama('Riki Widiantoro'))
+
+
+
+        class Anggotas {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+
+            getData(name, age) {
+                return `nama ${this.name}. umur ${this.age}`
+                // harus memakai this jika di dalam kelas, karena local scope
+            }
+        }
+
+        let anggota = new Anggotas('Toros', 23)
+        console.log(anggota.getData())
+
+
+
+        class MenghitungPoint {
+            // fungsi static tidak perlu meng-inisialisai kelas baru, tapi harus meng-inisialisasi this di dalam kelas utama
+            static getPoint(point) {
+                this.poin = point
+                return `poin-nya adalah ${this.poin}`
+            }
+        }
+        
+
+        console.log(MenghitungPoint.getPoint(100))
+
+    </script>
+</body>
+</html>
