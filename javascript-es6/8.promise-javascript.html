@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Javascript</title>
+</head>
+<body>
+    <h1>Promise Javascript</h1>
+
+    <script>
+        // // contoh sederhana promise dengan if else
+        // let coba = new Promise( (resolve, reject) => {
+        //     if( false ) {
+        //         resolve('berhasil!')
+        //     } else {
+        //         reject('gagal!')
+        //     }
+        // } );
+
+        // console.log(coba)
+
+
+        // // menggunakan callback then & catch untuk mengatasi error message
+        // let coba = new Promise( (resolve, reject) => {
+        //     if( true ) {
+        //         resolve('berhasil!')
+        //     } else {
+        //         reject('gagal!')
+        //     }
+        // }).then((pesan) => {
+        //     console.log(`ini then ${pesan}`)
+        // }).catch((pesan) => {
+        //     console.log(`ini catch ${pesan}`)
+        // })
+
+        // console.log(coba)
+
+
+        // dengan fungsi
+        let coba = () => {
+            return new Promise((resolve, reject) => {
+                let i = 10
+
+                if( i < 20 ) {
+                    resolve('berhasil!')
+                } else {
+                    reject('gagal!')
+                }
+            })
+        }
+
+        console.log( coba().then((pesan) => {
+            console.log(`ini then ${pesan}`)
+        }).catch((pesan) => {
+            console.log(`ini catch ${pesan}`)
+        }) )
+    </script>
+</body>
+</html>
