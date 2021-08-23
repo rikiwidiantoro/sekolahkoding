@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dasar Sekolah Koding</title>
+</head>
+<body>
+    <h1>KONTEN</h1>
+
+    <div id="box1">Box 1</div>
+
+    <div class="boxes">Baris pertama</div>
+    <div class="boxes">Baris kedua</div>
+    <div class="boxes">Baris ketiga</div>
+    <div class="boxes">Baris keempat</div>
+
+    <form action="">
+        <input type="text" id="input">
+        <input type="submit">
+    </form>
+
+
+    <script src="../jquery.js"></script>
+    <script>
+        // memastikan file sudah di load dengan sempurna
+        $(document).ready(function () {
+
+            // get dan set nilai >> val(), text()
+            $('form').submit(function() {
+                // val() >> untuk mengambil/mengubah isi dari input
+                let tulisan = $('#input').val();
+
+                // text() >> untuk mengambil isi text suatu element dan men-setting/ mengubah isi element
+                $('h1').text()
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>
