@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery Dasar Sekolah Koding</title>
+    <style>
+        #container {
+            width: 200px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <h1>KONTEN</h1>
@@ -51,7 +58,11 @@
             $('#container').before('<p>before</p>') // menambah element dibagian atas/awal di luar element
 
 
-
+            // menghapus element
+            // remove() , empty()
+            
+            // $('#container').remove(); // menghapus semua element
+            $('#container').empty(); // menghapus hanya isi element
 
         });
     </script>
