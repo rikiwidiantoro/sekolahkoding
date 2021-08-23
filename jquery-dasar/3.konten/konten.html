@@ -11,10 +11,12 @@
 
     <div id="box1">Box 1</div>
 
-    <div class="boxes">Baris pertama</div>
-    <div class="boxes">Baris kedua</div>
-    <div class="boxes">Baris ketiga</div>
-    <div class="boxes">Baris keempat</div>
+    <div id="container">
+        <div class="boxes">Baris pertama</div>
+        <div class="boxes">Baris kedua</div>
+        <div class="boxes">Baris ketiga</div>
+        <div class="boxes">Baris keempat</div>
+    </div>
 
     <form action="">
         <input type="text" id="input">
@@ -27,14 +29,27 @@
         // memastikan file sudah di load dengan sempurna
         $(document).ready(function () {
 
-            // get dan set nilai >> val(), text()
+            // get dan set nilai >> val(), text(), html()
             $('form').submit(function() {
+
+                // mencegah sifat asli
+                event.preventDefault();
+
                 // val() >> untuk mengambil/mengubah isi dari input
                 let tulisan = $('#input').val();
 
                 // text() >> untuk mengambil isi text suatu element dan men-setting/ mengubah isi element
-                $('h1').text()
+                $('h1').text(tulisan);
             });
+
+
+            // menambahkan dan menghapus element
+            // append, prepend | after, before
+            $('#container').append('<p>halloe</p>') // menambah element dibagian akhir > dalam element
+            $('#container').prepend('<p>hollaaaaa</p>') // menambah element dibagian awal > dalam element
+            $('#container').after('<p>after</p>') // menambah element dibagian bawah/akhir di luar element
+            $('#container').before('<p>before</p>') // menambah element dibagian atas/awal di luar element
+
 
 
 
