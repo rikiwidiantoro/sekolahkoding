@@ -30,6 +30,24 @@
 
             $('.boxes:eq(2)').css('color', 'aqua'); 
             // karena index dimulai dari angka 0
+
+
+            // event
+            let h1 = document.querySelector('h1');
+
+            $(h1).click(function () {
+                $(h1).css('color', 'black')
+            });
+            $(h1).mouseover(function () {
+                $(h1).css('color', 'yellow')
+            });
+            $(h1).mouseleave(function () {
+                $(h1).css('color', 'green')
+            });
+
+            $('.boxes').mouseover(function () {
+                $(this).css('color', 'aqua') // this >> memilih satu element
+            });
         });
     </script>
 </body>
