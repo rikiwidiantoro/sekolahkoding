@@ -18,6 +18,22 @@
             margin-right: 20px;
             font-size: 30px;
             padding: 15px;
+            cursor: pointer;
+        }
+        #stop {
+            margin-left: 50px;
+            padding: 25px;
+            background-color: aqua;
+            opacity: .7;
+            border-radius: 20px;
+        }
+        #stop:hover {
+            opacity: 1;
+        }
+        #chaining {
+            margin-left: 200px;
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
@@ -33,6 +49,8 @@
     <button id="btn2">show</button>
     <button id="btn3">toggle</button>
 
+    <button id="stop">STOP</button>
+
     <br><br><br>
 
     <button id="btn5">fadeOut</button>
@@ -46,10 +64,15 @@
     <button id="btn9">SlideDown</button>
     <button id="btn10">SlideToggle</button>
 
+    <br><br>
+
+    <button id="chaining">chaining</button>
+
     <script src="../jquery.js"></script>
     <script>
         // memastikan file sudah di load dengan sempurna
         $(document).ready(function () {
+            // ----- menampilkan dan menyembunyikan -----
             const boxKotak = $('#box1');
 
 
@@ -101,8 +124,28 @@
                 $(boxKotak).slideDown(3000);
             });
             $(btn10).click(function() {
-                $(boxKotak).slideToggle();
+                // callback
+                $(boxKotak).slideToggle(5000, function() {
+                    alert('selesai!')
+                });
             });
+
+
+
+
+            // ----- stop - callback - chaining -----
+            // stop() = menghentikan animasi ketika sedang berjalan
+            $('#stop').click(function() {
+                $(boxKotak).stop();
+            });
+
+            // callback = fungsi yg dipanggil setelah fungsi sebelumnya selesai dijalankan || fungsi didalam fungsi
+            
+            // chaining = menggabungkan beberapa metode/fungsi menjadi satu baris
+            $('#chaining').click(function() {
+                $(boxKotak).fadeOut(2000).slideDown(2000).fadeTo(2000, .3).slideUp(2000);
+            });
+
 
         });
     </script>
