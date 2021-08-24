@@ -7,14 +7,14 @@
     <title>Jquery Dasar Sekolah Koding</title>
 </head>
 <body>
-    <h1>Element = traversing</h1>
+    <h1>Element = siblings</h1>
 
     <ul>
         <li>HTML</li>
         <li id="css">CSS</li>
         <li>Javascript</li>
         <li>Bootstrap</li>
-        <li>Materialize</li>
+        <li id="m">Materialize</li>
         <li>jQuery</li>
         <li>React js</li>
     </ul>
@@ -23,16 +23,19 @@
     <script>
         $(document).ready(function() {
 
-            // traversing = cara memilih element berdasarkan hubungan dengan element lainnya
-            $('li').first().css('color', 'red');
-            $('li').eq(3).css('color', 'red');
-            $('li').last().css('color', 'red');
+            // siblings = untuk memilih element yg satu parent dengan dia >> kecuali element yg kita pilih >> mirip seperti not() di traversing
+            $('#css').siblings().css('fontSize', '30px');
 
-            // yg dipilih
-            $('li').filter('#css').css('fontSize', '30px');
+            // next = memilih satu element saja setelah element yg dipilih
+            $('#css').next().css('color', 'red');
 
-            // kebalikannya >> yg bukan dipilih
-            $('li').not('#css').css('backgroundColor', 'yellow');
+            // nextAll = mengubah semua element di bawah/setelah element yg kita pilih
+            $('#css').nextAll().css('backgroundColor', 'aqua');
+
+            // nextUntil = bisa mem-filter mau sampai mana efeknya
+            $('#css').nextUntil('#m').css('opacity', '.3');
+
+            // prev = kebalikan dari next
 
 
         });
