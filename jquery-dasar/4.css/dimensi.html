@@ -58,35 +58,6 @@
         // memastikan file sudah di load dengan sempurna
         $(document).ready(function () {
 
-            // event
-            let h1 = document.querySelector('h1');
-
-            $(h1).click(function () {
-                // ---- CSS ----
-                // penulisan banyak css >> pakai {}
-                $(h1).css({
-                    'color': 'black',
-                    'backgroundColor': 'grey',
-                    'border': '2px solid yellow',
-                    'fontSize': '50px'
-                })
-
-                // menambahkan class > addClass()
-                $('#container').addClass('rubah');
-
-                // menghapus class > removeClass()
-                $('#box1').removeClass('hilang')
-
-            });
-
-            $('#box1').click(function() {
-                // toggleClass() > ketika class ada maka akan menghapus dan ketika class tidak ada maka akan menambahkan > seperti tombol on/off 
-                // toggleClass() adalah gabungan dari addClass() dan removeClass()
-                $('#box1').toggleClass('hilang')
-            })
-
-
-
             // ---- DIMENSI ----
             // mengambil nilai dimensi
             /* 
