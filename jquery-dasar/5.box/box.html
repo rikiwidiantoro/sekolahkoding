@@ -7,16 +7,17 @@
     <title>Jquery Dasar Sekolah Koding</title>
     <style>
         #box1 {
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 350px;
             background-color: grey;
 
-            line-height: 300px;
+            line-height: 350px;
             text-align: center;
         }
         button {
             margin-right: 20px;
             font-size: 30px;
+            padding: 15px;
         }
     </style>
 </head>
@@ -28,20 +29,80 @@
 
     <br>
 
-    <button>hide</button>
-    <button>show</button>
-    <button>toggle</button>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <button id="btn3">toggle</button>
+
+    <br><br><br>
+
+    <button id="btn5">fadeOut</button>
+    <button id="btn4">fadeIn</button>
+    <button id="btn6">fadeTo</button>
+    <button id="btn7">fadeToggle</button>
+
+    <br><br><br>
+
+    <button id="btn8">slideUp</button>
+    <button id="btn9">SlideDown</button>
+    <button id="btn10">SlideToggle</button>
 
     <script src="../jquery.js"></script>
     <script>
         // memastikan file sudah di load dengan sempurna
         $(document).ready(function () {
+            const boxKotak = $('#box1');
+
 
             // hide() - show() - toggle()
+            const btn1 = $('#btn1');
+            const btn2 = $('#btn2');
+            const btn3 = $('#btn3');
+
+            $(btn1).click(function() {
+                $(boxKotak).hide();
+            });
+            $(btn2).click(function() {
+                $(boxKotak).show();
+            });
+            $(btn3).click(function() {
+                $(boxKotak).toggle();
+            });
+
 
             // fadeIn() - fadeOut() - fadeTo(time, opacity) - fadeToggle()
+            const btn4 = $('#btn4');
+            const btn5 = $('#btn5');
+            const btn6 = $('#btn6');
+            const btn7 = $('#btn7');
+
+            $(btn4).click(function() {
+                $(boxKotak).fadeIn(2000);
+            });
+            $(btn5).click(function() {
+                $(boxKotak).fadeOut(2000);
+            });
+            $(btn6).click(function() {
+                $(boxKotak).fadeTo(2000, .3);
+            });
+            $(btn7).click(function() {
+                $(boxKotak).fadeToggle(2000);
+            });
+
 
             // slideUp() - SlideDown() - SlideToggle()
+            const btn8 = $('#btn8');
+            const btn9 = $('#btn9');
+            const btn10 = $('#btn10');
+
+            $(btn8).click(function() {
+                $(boxKotak).slideUp(3000);
+            });
+            $(btn9).click(function() {
+                $(boxKotak).slideDown(3000);
+            });
+            $(btn10).click(function() {
+                $(boxKotak).slideToggle();
+            });
 
         });
     </script>
