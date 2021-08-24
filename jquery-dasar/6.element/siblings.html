@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dasar Sekolah Koding</title>
+</head>
+<body>
+    <h1>Element = traversing</h1>
+
+    <ul>
+        <li>HTML</li>
+        <li id="css">CSS</li>
+        <li>Javascript</li>
+        <li>Bootstrap</li>
+        <li>Materialize</li>
+        <li>jQuery</li>
+        <li>React js</li>
+    </ul>
+
+    <script src="../jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // traversing = cara memilih element berdasarkan hubungan dengan element lainnya
+            $('li').first().css('color', 'red');
+            $('li').eq(3).css('color', 'red');
+            $('li').last().css('color', 'red');
+
+            // yg dipilih
+            $('li').filter('#css').css('fontSize', '30px');
+
+            // kebalikannya >> yg bukan dipilih
+            $('li').not('#css').css('backgroundColor', 'yellow');
+
+
+        });
+    </script>
+</body>
+</html>
