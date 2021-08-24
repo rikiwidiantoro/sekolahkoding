@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Dasar Sekolah Koding</title>
+</head>
+<body>
+    <h1>Element = childern & parent</h1>
+
+    <p>paragraf pertama</p>
+
+    <ul>
+        <li>HTML</li>
+        <li id="css">CSS</li>
+        <li>Javascript</li>
+        <li>Bootstrap</li>
+        <li id="m">Materialize</li>
+        <li>jQuery</li>
+        <li>React js</li>
+        <div>
+            <p>paragraf dalam</p>
+            <span>span dalam</span>
+        </div>
+        <span>span luar</span>
+    </ul>
+
+    <script src="../jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            // childern
+            $('ul').children().css('color', 'red');
+            $('ul').children('span').css('backgroundColor', 'blue');
+
+            // find = semua anak
+            $('ul').find('span').css('fontSize', '30px');
+
+            // parent
+            $('#css').parent().css('border', '3px solid yellow');
+            // parents = semua orang tua
+            $('#css').parents().css('border', '3px solid yellow');
+
+        });
+    </script>
+</body>
+</html>
